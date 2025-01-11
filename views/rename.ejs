@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Node Project</title>
+</head>
+
+<body>
+
+  <body class="bg-slate-200 max-w-5xl mx-auto">
+    <div class="w-full container mx-auto m-4 p-4"></div>
+
+    <!-- Form Input section -->
+    <form action="/rename" method="post" class="max-w-4xl mx-auto bg-white py-3 px-4 shadow-lg">
+      <div class="mb-5">
+        <label for="oldtitle" class="block mb-2 text-sm font-medium text-gray-600 dark:text-white">Previous Name</label>
+        <input type="text" name="oldtitle" value="<%= fileName %>" class="hidden bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-500 dark:focus:border-yellow-500" placeholder="name@flowbite.com" required />
+        <h1 class="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-500 dark:focus:border-yellow-500"> <%= fileName %></h1>
+      </div>
+      <div class="mb-5">
+        <label for="newtitle" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter Updated Name</label>
+        <input type="text" name="newtitle" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-500 dark:focus:border-yellow-500" placeholder="name@flowbite.com" required />
+      </div>
+      <button type="submit" class="text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800">Submit</button>
+    </form>
+    <!-- Form Input section End -->
+
+    <script src="/javascripts/internalJS.js"></script>
+  </body>
+
+</html>
